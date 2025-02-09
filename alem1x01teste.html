@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+		<link rel="stylesheet" type="text/css" >
+
+
+
+	<meta charset="utf-8">
+
+		<style>
+			#Budismorics{
+			background-color: #feec71;
+			}
+				#DHAMMAPADA{
+			background-color: #feec71;
+			}
+		</style>
+
+	<title>Além da Imaginação - 1 X 01 - Onde estão Todos</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+
+<style>
+
+#DHAMMAPADA{
+	background-color: #feec71;
+}
+	
+	
+</style>
+	
+
+
+	
+
+	
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain attribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+	
+<body>
+	
+<body>
+	
+		<div id="logovideos">
+	<img src="logoseries.jpg">
+</div>
+	
+<div w3-include-html="contentseriesalem.html" ></div>
+<script>
+includeHTML();
+</script>
+	
+
+	
+
+	
+	
+<div id="meiovideos">
+
+
+<p>Além da Imaginação - 1 X 01 - Onde estão Todos</p>
+
+</div>
+
+
+
+
+
+<video id="alem1x01" preload="auto" tabindex="0" controls=""  >
+	<source src="alem1x01parte1.mp4">
+	</video>
+
+	<ul id="playlist">
+		<li class="active"><a href="alem1x01parte1.mp4">episódio 1 X 01</a></li>
+		<li> <a href="alem1x01parte2.mp4">episodio1x01 parte2</a></li>
+		<li><a href="alem1x01parte3.mp4">episodio 1x01 parte 3</a></li>
+
+	</ul>
+
+	<script type="text/javascript">
+
+
+
+
+
+		inicio();
+		function inicio(){
+var corrente = 0;
+var audio = $( "#audio");
+ var playlist = $("#playlist");
+ var tracks = playlist.find("li a");
+ var len = tracks.lenght - 1;
+ audio[0].play();
+ playlist.find("a").click(function(e){
+ 	e.preventDefault();
+ 	link = $(this);
+ 	corrente = link.parent().index();
+ 	run(link, video[0]);
+ })
+audio[0].addEventListener("ended", function(e){
+	corrente++;
+	if(corrente = len){
+		corrente = 0;
+		link.playlist.find("a")[0];
+
+	}else{
+		link = playlist.find("a")[corrente];
+	}
+	run($(link), audio[0]);
+});
+
+
+
+
+		}
+
+
+
+
+
+
+
+	</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
