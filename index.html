@@ -79,50 +79,15 @@ includeHTML();
 <div id="meiomusicas">
 
 <div id="Antigas">
-teste thumbnail 1
+teste thumbnail 2
 
 
-<?php
 
-
-	
-	/**
- * Get Vimeo.com video thumbnail URL
- *
- * Set the referer parameter if your video is domain restricted.
- * 
- * @param  int    $videoid   Video id
- * @param  URL    $referer   Your website domain
- * @return bool/string       Thumbnail URL or false if can't access the video
- */
-function get_vimeo_thumbnail_url( $videoid, $referer=null ){
-
-    // if referer set, create context
-    $ctx = null;
-    if( isset($referer) ){
-        $ctxa = array(
-            'http' => array(
-                'header' => array("Referer: $referer\r\n"),
-                'request_fulluri' => true,
-            ),
-        );
-        $ctx = stream_context_create($ctxa);
-    }
-
-    $resp = @file_get_contents("https://vimeo.com/api/oembed.json?url=https://vimeo.com/$videoid", False, $ctx);
-    $resp = json_decode($resp, true);
-
-return $resp["thumbnail_url"]??false;
-}
-
-
-echo get_vimeo_thumbnail_url("1011655897");
-
-
-?>
+           
+https://vumbnail.com/226020936.jpg
 fim do teste
 	
-<a href="https://vimeo.com/1011655897"><img src="https://i.vimeocdn.com/video/1011655897_640.jpg"` alt="" /><img src="https://i.vimeocdn.com/video/1011655897"><img src="http://ts.vimeo.com.s3.amazonaws.com/235/662/1011655897_100.jpg"></br>TESTE! - 1X01 - Onde estão Todos</a>
+<a href="https://vimeo.com/1011655897"><img src="https://vumbnail.com/226020936.jpg"></br>TESTE! - 1X01 - Onde estão Todos</a>
 </div>   
 <div id="Antigas">
 <a href="https://vimeo.com/1011667557"><img src="https://i.vimeocdn.com/video/{1011667557}"></br>1X02 - Um Negócio Para Os Anjos</a>
